@@ -28,7 +28,7 @@ if(empty($_SESSION['username'])){
     <div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
         <div id="header" class="header navbar-default">
             <div class="navbar-header">
-                <a href="index.html" class="navbar-brand"><span><img class="manImg" src="assets/img/hubnew.png"></img></span> <b> &nbsp;Talavera's </b> HOPE</a>
+                <a href="index.html" class="navbar-brand"><span class="navbar-logo"></span> <b>Talavera's </b>| HOPE</a>
                 <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -99,14 +99,14 @@ if(empty($_SESSION['username'])){
 
                 <ul class="nav">
                     <li class="nav-header">Navigation</li>
-                    <li class="has-sub active">
+                    <li class="has-sub">
                         <a href="javascript:;">
                             <i class="fa fa-th-large"></i>
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    <li class="has-sub">
-                        <a href="masterlist.php">
+                    <li class="has-sub active">
+                        <a href="javascript:;">
                             <i class="fa fa-users"></i>
                             <span>Clients</span>
                         </a>
@@ -211,12 +211,12 @@ if(empty($_SESSION['username'])){
 
             <div class="row">
 
-                <div class="col-xl-8">
+                <div class="col-xl-12">
 
                     <div class="panel panel-inverse">
 
                         <div class="panel-heading">
-                            <h4 class="panel-title">For Refill - Today</h4>
+                            <h4 class="panel-title">Master List of Clients</h4>
                             <div class="panel-heading-btn">
                                 <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
                                 <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
@@ -242,10 +242,26 @@ Try to mouseover and drag over any table column below.
                             <table id="refill_list_today" class="table table-striped table-bordered table-td-valign-middle" width="100%">
                                 <thead>
                                     <tr>
-                                        <th class="text-nowrap">ID</th>
                                         <th class="text-nowrap">Client Code</th>
-                                        <th class="text-nowrap">Drug</th>
-                                        <th class="text-nowrap">Date of Refill</th>
+                                        <th class="text-nowrap">KP Class</th>
+                                        <th class="text-nowrap">ARV</th>
+                                        <th class="text-nowrap">TB Status</th>
+                                        <th class="text-nowrap">CD4 Date</th>
+                                        <th class="text-nowrap">CD4 Result</th>
+                                        <th class="text-nowrap">VL</th>
+                                        <th class="text-nowrap">VL Result</th>
+                                        <th class="text-nowrap">IPT</th>
+                                        <th class="text-nowrap">IPT Status</th>
+                                        <th class="text-nowrap">IPT Disc.</th>
+                                        <th class="text-nowrap">IPT Remarks</th>
+                                        <th class="text-nowrap">CPT</th>
+                                        <th class="text-nowrap">CPT Status</th>
+                                        <th class="text-nowrap">CPT Disc.</th>
+                                        <th class="text-nowrap">CPT Remarks</th>
+                                        <th class="text-nowrap">AZT</th>
+                                        <th class="text-nowrap">AZT Status</th>
+                                        <th class="text-nowrap">AZT Disc.</th>
+                                        <th class="text-nowrap">AZT Remarks</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -254,62 +270,11 @@ Try to mouseover and drag over any table column below.
                         </div>
                     </div>
 
-                    <div class="panel panel-inverse">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">For Refill - Next 7 days</h4>
-                            <div class="panel-heading-btn">
-                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
-                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="panel-body">
-                            <table id="fetch_refill_this_week" class="table table-striped table-bordered table-td-valign-middle">
-                                <thead>
-                                    <tr>
-                                        <th class="text-nowrap">ID</th>
-                                        <th class="text-nowrap">Client Code</th>
-                                        <th class="text-nowrap">Drug</th>
-                                        <th class="text-nowrap">Date of Refill</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
-                        </div>
-
-                    </div>
+                  
 
 
                 </div>
 
-
-                <div class="col-xl-4">
-                    <div class="panel panel-inverse" data-sortable-id="index-1">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                
-                            </h4>
-                        </div>
-                        <div id="visitors-map" class="bg-dark-darker" style="height: 179px;"></div>
-                        <div class="list-group">
-                            <a href="javascript:;" class="list-group-item list-group-item-action list-group-item-inverse d-flex justify-content-between align-items-center text-ellipsis">
-                                1. United State
-                                <span class="badge bg-teal f-s-10">20.95%</span>
-                            </a>
-                            <a href="javascript:;" class="list-group-item list-group-item-action list-group-item-inverse d-flex justify-content-between align-items-center text-ellipsis">
-                                2. India
-                                <span class="badge bg-blue f-s-10">16.12%</span>
-                            </a>
-                            <a href="javascript:;" class="list-group-item list-group-item-action list-group-item-inverse d-flex justify-content-between align-items-center text-ellipsis">
-                                3. Mongolia
-                                <span class="badge bg-silver-darker f-s-10">14.99%</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
