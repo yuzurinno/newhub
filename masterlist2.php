@@ -10,6 +10,8 @@ $designation = $_SESSION['designation'];
 if(empty($_SESSION['username'])){
     header("location:login.php");
 }
+
+$page_header = "HACT <small>Monitoring System</small>";
 ?>
 
 <!DOCTYPE html>
