@@ -20,8 +20,14 @@ if(empty($_SESSION['username'])){
 </head>
 
 <body>
-<script src="../assets/js/app.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="../assets/js/theme/default.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+<link href="../assets/css/default/app.min.css" rel="stylesheet" />
+
+
+<link href="assets/plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+<link href="assets/plugins/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+<link href="assets/plugins/datatables.net-scroller-bs4/css/scroller.bootstrap4.min.css" rel="stylesheet" />
+   
     <div id="page-loader" class="fade show">
         <span class="spinner"></span>
     </div>
@@ -239,7 +245,7 @@ Try to mouseover and drag over any table column below.
 
 
                         <div class="panel-body">
-                            <table id="refill_list_today" class="table table-striped table-bordered table-td-valign-middle" width="100%">
+                            <table id="client_list" class="table table-striped table-bordered table-td-valign-middle" width="100%">
                                 <thead>
                                     <tr>
                                         <th class="text-nowrap">Client Code</th>
@@ -405,20 +411,10 @@ Clay Hike
 <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
 
 <?php include 'includes/footer.php'; ?>
-<script src="assets/js/app.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="assets/js/theme/default.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="assets/js/app.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="assets/js/theme/default.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
 
-<script src="assets/plugins/datatables.net/js/jquery.dataTables.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="assets/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="assets/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="assets/plugins/datatables.net-autofill/js/dataTables.autoFill.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="assets/plugins/datatables.net-autofill-bs4/js/autoFill.bootstrap4.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="assets/js/demo/table-manage-autofill.demo.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
 
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="2f70c5f32bf6631aa2736d53-|49" defer=""></script>
+
+
 
 <?php include 'scripts.html'; ?>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
@@ -426,78 +422,25 @@ Clay Hike
     $(document).ready(function() {
 
 
-        $('#client_search').change(function() {
-            var client_id = $(this).val();
-            console.log('From select ' + client_id);
-            $('#tb_transaction').DataTable().destroy();
-            fetch_transaction(client_id);
+     
+            function fetch_data() {
+                var dataTable = $('#client_list').DataTable({
 
-        });
-        fetch_refill_today();
-        fetch_refill_this_week();
+                    "processing": true,
+                    "serverSide": true,
+                    "order": [],
+                    "ajax": {
+                        url: "fetch.php",
+                        type: "POST",
 
-        function fetch_refill_today() {
-            var dataTable = $('#refill_list_today').DataTable({
+                    }
 
-                "processing": true,
-                "serverSide": true,
-                "order": [],
-                "ajax": {
-                    url: "fetch_refill_today.php",
-                    type: "POST",
+                });
+            }
 
-                }
-
-            });
-        }
-
-        function fetch_refill_this_week() {
-            var dataTable = $('#fetch_refill_this_week').DataTable({
-
-                "processing": true,
-                "serverSide": true,
-                "order": [],
-                "ajax": {
-                    url: "fetch_refill_this_week.php",
-                    type: "POST",
-
-                }
-
-            });
-        }
-
-        function fetch_refill_next_month() {
-            var dataTable = $('#').DataTable({
-
-                "processing": true,
-                "serverSide": true,
-                "order": [],
-                "ajax": {
-                    url: "fetch_refill_next_month.php",
-                    type: "POST",
-
-                }
-
-            });
-        }
-
-        function fetch_refill_date() {
-            var dataTable = $('#').DataTable({
-
-                "processing": true,
-                "serverSide": true,
-                "order": [],
-                "ajax": {
-                    url: "fetch_refill_date.php",
-                    type: "POST",
-
-                }
-
-            });
-        }
-
-
-
+		
+      fetch_data();
+         
 
     });
 

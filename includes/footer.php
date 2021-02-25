@@ -26,3 +26,15 @@
 <script src="assets/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
 <script src="assets/js/demo/dashboard.js"></script>
 <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="defaa6b258bf360c301851d1-|49" defer=""></script>
+
+
+
+
+<script src="../assets/js/theme/default.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
+<script src="../assets/js/app.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
+<script src="../assets/js/theme/default.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
+
+<script src="../assets/plugins/datatables.net/js/jquery.dataTables.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
+<script src="../assets/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
+<script src="../assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
+<script src="../assets/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
