@@ -21,8 +21,18 @@ $page_header = "HACT <small>Monitoring System</small>";
     <title>Color Admin | Dashboard</title>
     <?php include 'includes/head.php'; ?>
     <style>
-		table td { word-break: keep-all!important; }
-	</style>
+        table td {
+            word-break: keep-all !important;
+        }
+
+        .table-brown,
+        .table-brown>td,
+        .table-brown>th {
+            background-color: brown;
+            color: white;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -58,7 +68,7 @@ $page_header = "HACT <small>Monitoring System</small>";
                             <div class="stats-title">TODAY'S NEW CLIENTS</div>
                             <div class="stats-number">0</div>
                             <div class="stats-progress progress">
-<!--                                <div class="progress-bar" style="width: 40.5%;"></div>-->
+                                <!--                                <div class="progress-bar" style="width: 40.5%;"></div>-->
                             </div>
                             <div class="stats-desc">Today</div>
                         </div>
@@ -117,38 +127,38 @@ $page_header = "HACT <small>Monitoring System</small>";
 
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <table id="client_list"  class="table table-striped table-bordered table-td-valign-middle" width="200%">
-                                <thead>
-                                    <tr>
-                                        <th class="text-nowrap">Client Code</th>
-                                        <th class="text-nowrap">KP Class</th>
-                                        <th class="text-nowrap">ARV</th>
-                                        <th class="text-nowrap">TB Status</th>
-                                        <th class="text-nowrap">CD4 Date</th>
-                                        <th class="text-nowrap">CD4 Result</th>
-                                        <th class="text-nowrap">VL</th>
-                                        <th class="text-nowrap">VL Result</th>
-                                        <th class="text-nowrap">IPT</th>
-                                        <th class="text-nowrap">IPT Status</th>
-                                        <th class="text-nowrap">IPT Disc.</th>
-                                        <th class="text-nowrap">IPT Remarks</th>
-                                        <th class="text-nowrap">CPT</th>
-                                        <th class="text-nowrap">CPT Status</th>
-                                        <th class="text-nowrap">CPT Disc.</th>
-                                        <th class="text-nowrap">CPT Remarks</th>
-                                        <th class="text-nowrap">AZT</th>
-                                        <th class="text-nowrap">AZT Status</th>
-                                        <th class="text-nowrap">AZT Disc.</th>
-                                        <th class="text-nowrap">AZT Remarks</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
+                                <table id="client_list" class="table table-bordered table-td-valign-middle" width="200%">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-nowrap">Client Code</th>
+                                            <th class="text-nowrap">KP Class</th>
+                                            <th class="text-nowrap">ARV</th>
+                                            <th class="text-nowrap">TB Status</th>
+                                            <th class="text-nowrap">CD4 Date</th>
+                                            <th class="text-nowrap">CD4 Result</th>
+                                            <th class="text-nowrap">VL</th>
+                                            <th class="text-nowrap">VL Result</th>
+                                            <th class="text-nowrap">IPT</th>
+                                            <th class="text-nowrap">IPT Status</th>
+                                            <th class="text-nowrap">IPT Disc.</th>
+                                            <th class="text-nowrap">IPT Remarks</th>
+                                            <th class="text-nowrap">CPT</th>
+                                            <th class="text-nowrap">CPT Status</th>
+                                            <th class="text-nowrap">CPT Disc.</th>
+                                            <th class="text-nowrap">CPT Remarks</th>
+                                            <th class="text-nowrap">AZT</th>
+                                            <th class="text-nowrap">AZT Status</th>
+                                            <th class="text-nowrap">AZT Disc.</th>
+                                            <th class="text-nowrap">AZT Remarks</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                        
-                
+
+
 
                     </div>
 
@@ -163,7 +173,7 @@ $page_header = "HACT <small>Monitoring System</small>";
         <?php include 'includes/app-settings.php'; ?>
         <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
         <script src="assets/plugins/highlight.js/highlight.min.js" type="67901a91b1666f1b32d3dba0-text/javascript"></script>
-<script src="assets/js/demo/render.highlight.js" type="67901a91b1666f1b32d3dba0-text/javascript"></script>
+        <script src="assets/js/demo/render.highlight.js" type="67901a91b1666f1b32d3dba0-text/javascript"></script>
     </div>
 
     <?php include 'includes/footer.php'; ?>
@@ -175,6 +185,13 @@ $page_header = "HACT <small>Monitoring System</small>";
 
         function fetch_data() {
             var dataTable = $('#client_list').DataTable({
+                "createdRow": function(row, data, dataIndex) {
+                    if (data[0] == "LTE") {
+                        $(row).addClass('table-danger');
+                    } else if (data[0] == "3TC AZT") {
+                        $(row).addClass('table-brown');
+                    }
+                },
                 "processing": true,
                 "serverSide": true,
                 "order": [],
@@ -185,7 +202,6 @@ $page_header = "HACT <small>Monitoring System</small>";
                 }
             });
         }
-		
 
     </script>
 </body>
