@@ -22,6 +22,10 @@ $page_header = "HACT <small>Monitoring System</small>";
     <?php include 'includes/head.php'; ?>
     <style>
 		table td { word-break: keep-all!important; }
+		.header1 {
+			background-color: #1D2226;
+			color: white;
+		}
 	</style>
 </head>
 
@@ -56,11 +60,11 @@ $page_header = "HACT <small>Monitoring System</small>";
                         <div class="stats-icon stats-icon-lg"><i class="fa fa-dollar-sign fa-fw"></i></div>
                         <div class="stats-content">
                             <div class="stats-title">TODAY'S NEW CLIENTS</div>
-                            <div class="stats-number">0</div>
+                            <div class="stats-number">180,200</div>
                             <div class="stats-progress progress">
-<!--                                <div class="progress-bar" style="width: 40.5%;"></div>-->
+                                <div class="progress-bar" style="width: 40.5%;"></div>
                             </div>
-                            <div class="stats-desc">Today</div>
+                            <div class="stats-desc">Better than last week (40.5%)</div>
                         </div>
                     </div>
                 </div>
@@ -105,7 +109,7 @@ $page_header = "HACT <small>Monitoring System</small>";
                     <div class="panel panel-inverse">
 
                         <div class="panel-heading">
-                            <h4 class="panel-title">Master List of Clients</h4>
+                            <h4 class="panel-title">TB Status Monitoring</h4>
                             <div class="panel-heading-btn">
                                 <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
                                 <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
@@ -117,29 +121,16 @@ $page_header = "HACT <small>Monitoring System</small>";
 
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <table id="client_list"  class="table table-striped table-bordered table-td-valign-middle" width="200%">
+                                <table id="tb_client"  class="table table-striped table-bordered table-td-valign-middle" width="100%">
                                 <thead>
-                                    <tr>
+                                    <tr class="header1">
                                         <th class="text-nowrap">Client Code</th>
-                                        <th class="text-nowrap">KP Class</th>
-                                        <th class="text-nowrap">ARV</th>
                                         <th class="text-nowrap">TB Status</th>
-                                        <th class="text-nowrap">CD4 Date</th>
-                                        <th class="text-nowrap">CD4 Result</th>
-                                        <th class="text-nowrap">VL</th>
-                                        <th class="text-nowrap">VL Result</th>
-                                        <th class="text-nowrap">IPT</th>
-                                        <th class="text-nowrap">IPT Status</th>
-                                        <th class="text-nowrap">IPT Disc.</th>
-                                        <th class="text-nowrap">IPT Remarks</th>
-                                        <th class="text-nowrap">CPT</th>
-                                        <th class="text-nowrap">CPT Status</th>
-                                        <th class="text-nowrap">CPT Disc.</th>
-                                        <th class="text-nowrap">CPT Remarks</th>
-                                        <th class="text-nowrap">AZT</th>
-                                        <th class="text-nowrap">AZT Status</th>
-                                        <th class="text-nowrap">AZT Disc.</th>
-                                        <th class="text-nowrap">AZT Remarks</th>
+                                        <th class="text-nowrap">Site</th>
+                                        <th class="text-nowrap">TX Status</th>
+                                        <th class="text-nowrap">TX Result</th>
+                                        <th class="text-nowrap">HBsAg</th>
+                                      
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -174,12 +165,12 @@ $page_header = "HACT <small>Monitoring System</small>";
         });
 
         function fetch_data() {
-            var dataTable = $('#client_list').DataTable({
+            var dataTable = $('#tb_client').DataTable({
                 "processing": true,
                 "serverSide": true,
                 "order": [],
                 "ajax": {
-                    url: "fetch.php",
+                    url: "fetch_tb.php",
                     type: "POST",
 
                 }

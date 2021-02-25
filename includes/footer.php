@@ -33,3 +33,5 @@
 <script src="assets/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
 <script src="assets/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+<script src="assets/plugins/highlight.js/highlight.min.js"></script>
+<script src="assets/js/demo/render.highlight.js"></script>

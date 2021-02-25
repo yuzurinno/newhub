@@ -17,25 +17,25 @@
         <ul class="nav">
             <li class="nav-header">Navigation</li>
             <li class="has-sub">
-                <a href="javascript:;">
+                <a href="index.php">
                     <i class="fa fa-th-large"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
-            <li class="has-sub active">
-                <a href="javascript:;">
+            <li class="has-sub">
+                <a href="masterlist2.php">
                     <i class="fa fa-users"></i>
                     <span>Clients</span>
                 </a>
             </li>
             <li class="has-sub">
-                <a href="javascript:;">
+                <a href="tb-stat.php">
                     <i class="fa fa-tv"></i>
                     <span>TB Status Monitoring</span>
                 </a>
             </li>
             <li class="has-sub">
-                <a href="javascript:;">
+                <a href="transactions.php">
                     <i class="fa fa-calculator"></i>
                     <span>Transactions</span>
                 </a>
