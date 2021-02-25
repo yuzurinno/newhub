@@ -14,7 +14,6 @@
                 </a>
             </li>
         </ul>
-
         <ul class="nav">
             <li class="nav-header">Navigation</li>
             <li class="has-sub">
@@ -42,10 +41,7 @@
                 </a>
             </li>
             <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
-
         </ul>
-
     </div>
-
 </div>
 <div class="sidebar-bg"></div>
