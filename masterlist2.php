@@ -130,6 +130,7 @@ $page_header = "HACT <small>Monitoring System</small>";
                                 <table id="client_list" class="table table-bordered table-td-valign-middle" width="200%">
                                     <thead>
                                         <tr>
+                                            <th class="text-nowrap">Code</th>
                                             <th class="text-nowrap">Client Code</th>
                                             <th class="text-nowrap">KP Class</th>
                                             <th class="text-nowrap">ARV</th>
