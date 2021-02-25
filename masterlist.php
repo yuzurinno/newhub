@@ -20,14 +20,14 @@ if(empty($_SESSION['username'])){
 </head>
 
 <body>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-<link href="../assets/css/default/app.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link href="../assets/css/default/app.min.css" rel="stylesheet" />
 
 
-<link href="assets/plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
-<link href="assets/plugins/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" />
-<link href="assets/plugins/datatables.net-scroller-bs4/css/scroller.bootstrap4.min.css" rel="stylesheet" />
-   
+    <link href="assets/plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="assets/plugins/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+    <link href="assets/plugins/datatables.net-scroller-bs4/css/scroller.bootstrap4.min.css" rel="stylesheet" />
+
     <div id="page-loader" class="fade show">
         <span class="spinner"></span>
     </div>
@@ -276,7 +276,7 @@ Try to mouseover and drag over any table column below.
                         </div>
                     </div>
 
-                  
+
 
 
                 </div>
@@ -388,25 +388,13 @@ Clay Hike
     </div>
 
 </body>
- <?php include 'includes/app-settings.php'; ?>
-        <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
-    </div>
+<?php include 'includes/app-settings.php'; ?>
+<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
 
-    <?php include 'includes/footer.php'; ?>
-    <script src="assets/js/app.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
+<?php include 'includes/footer.php'; ?>
+<script src="assets/js/app.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
 <script src="assets/js/theme/default.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
 
-<script type="2f70c5f32bf6631aa2736d53-text/javascript">
-        (function(i,s,o,g,r,a,m){i['GoogleAnalytics
-        Object']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-53034621-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
 <?php include 'includes/app-settings.php'; ?>
 <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
 
@@ -420,30 +408,21 @@ Clay Hike
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 <script>
     $(document).ready(function() {
-
-
-     
-            function fetch_data() {
-                var dataTable = $('#client_list').DataTable({
-
-                    "processing": true,
-                    "serverSide": true,
-                    "order": [],
-                    "ajax": {
-                        url: "fetch.php",
-                        type: "POST",
-
-                    }
-
-                });
-            }
-
-		
-      fetch_data();
-         
+        fetch_data();
 
     });
+    function fetch_data() {
+        var dataTable = $('#client_list').DataTable({
+            "processing": true,
+            "serverSide": true,
+            "order": [],
+            "ajax": {
+                url: "fetch.php",
+                type: "POST",
 
+            }
+        });
+    }
 </script>
 
 </html>

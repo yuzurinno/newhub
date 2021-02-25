@@ -4,6 +4,7 @@ include 'includes/connection.php';
 if(isset($_POST['signin'])){
     $username = $_POST['username'];
     
+    $error = 'Incorect Credentials';
    if(!isset($username, $_POST['password'])) {
 	exit('Please fill both the username and password fields!');
    }
@@ -55,6 +56,7 @@ if(isset($_POST['signin'])){
         <span class="spinner"></span>
     </div>
     <div id="page-container" class="fade">
+       
         <div class="login login-with-news-feed">
             <div class="news-feed">
                 <div class="news-image" style="background-image: url(assets/img/login-bg/login-bg-11.jpg)"></div>
@@ -75,8 +77,6 @@ if(isset($_POST['signin'])){
                         <i class="fa fa-sign-in-alt"></i>
                     </div>
                 </div>
-
-
                 <div class="login-content">
                      <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="margin-bottom-0">
                         <div class="form-group m-b-15">
@@ -99,10 +99,10 @@ if(isset($_POST['signin'])){
                         <p class="text-center text-grey-darker mb-0">
                             &copy; TGH All Right Reserved <?php echo date('Y'); ?>
                         </p>
-                         <?php if(isset($_POST['signin'])){ echo $alert; } ?>
+                         
                     </form>
                 </div>
-
+                <?php if(isset($_POST['signin'])){ echo $alert; } ?>
             </div>
 
         </div>
