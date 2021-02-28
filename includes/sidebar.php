@@ -23,10 +23,15 @@
                 </a>
             </li>
             <li class="has-sub">
-                <a href="masterlist2.php">
+                <a href="javascript:;">
+                    <b class="caret"></b>
                     <i class="fa fa-users"></i>
                     <span>Clients</span>
                 </a>
+                <ul class="sub-menu">
+                    <li><a href="masterlist2.php">Masterlist</a></li>
+                    <li><a href="#">Client's Profile</a></li>
+                </ul>
             </li>
             <li class="has-sub">
                 <a href="tb-stat.php">
