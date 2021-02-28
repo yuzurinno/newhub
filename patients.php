@@ -20,12 +20,6 @@ $page_header = "HACT <small>Monitoring System</small>";
     <title>Patients | HACT</title>
     <?php include 'includes/head.php'; ?>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
-    <style>
-        .card-info .card-header{
-            background-color: #00acac;
-            color: white;
-        }
-    </style>
 </head>
 
 <body>
@@ -38,25 +32,33 @@ $page_header = "HACT <small>Monitoring System</small>";
         <div id="content" class="content">
             <?php include 'includes/breadcrumb.php'; ?>
             <!-- Content Here -->
-            <div class="panel panel-danger">
-
+            <div class="panel panel-inverse">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Add/Update Patient</h4>
+                    <select class="select" name="client_search" id="client_search" style="width:250px;" required>
+                        <option value="">Select Client</option>
+                    </select>
+                    <div class="panel-heading-btn ml-3">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                    </div>
+                </div>
 
                 <div class="panel-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group pull-right">
-                                <label for=""> Select Client: &nbsp;</label>
-                                <select class="select" name="client_search" id="client_search" style="width:250px;" required>
-                                    <option value="">Select Client</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
                     <form method="post" action="" id="form_submit">
-                        <div class="card card-info mt-3">
-                            <div class="card-header" style="font-size: 16px"><b>Basic Information</b></div>
-                            <div class="card-body">
+                        <div class="panel panel-info mt-3">
+                            <div class="panel-heading" style="font-size: 16px">
+                                <h5 class="panel-title">Basic Information</h5>
+                                <div class="panel-heading-btn ml-3">
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
                                 <div class="row">
                                     <div class="col-md-3">
                                         <div class="form-group">
@@ -115,9 +117,17 @@ $page_header = "HACT <small>Monitoring System</small>";
                             </div>
                         </div>
 
-                        <div class="card card-info mt-3">
-                            <div class="card-header" style="font-size: 16px"><b>IPT</b></div>
-                            <div class="card-body">
+                        <div class="panel panel-info mt-3">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">IPT</h4>
+                                <div class="panel-heading-btn ml-3">
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
                                 <div class="row">
                                     <div class="col-md-3">
                                         <div class="form-group">
@@ -157,9 +167,17 @@ $page_header = "HACT <small>Monitoring System</small>";
                         </div>
 
 
-                        <div class="card card-info mt-3">
-                            <div class="card-header" style="font-size: 16px"><b>CPT</b></div>
-                            <div class="card-body">
+                        <div class="panel panel-info mt-3">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">CPT</h4>
+                                <div class="panel-heading-btn ml-3">
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
                                 <div class="row">
                                     <div class="col-md-3">
                                         <div class="form-group">
@@ -200,9 +218,17 @@ $page_header = "HACT <small>Monitoring System</small>";
                             </div>
 
                         </div>
-                        <div class="card card-info mt-3">
-                            <div class="card-header" style="font-size: 16px"><b>Azithro</b></div>
-                            <div class="card-body">
+                        <div class="panel panel-info mt-3">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Azithro</h4>
+                                <div class="panel-heading-btn ml-3">
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
                                 <div class="row">
                                     <div class="col-md-3">
                                         <div class="form-group">
@@ -245,10 +271,18 @@ $page_header = "HACT <small>Monitoring System</small>";
                         </div>
 
 
-                        <div class="card card-info mt-3">
-                            <div class="card-header"><b>Regimen</b></div>
+                        <div class="panel panel-info mt-3">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Regimen</h4>
+                                <div class="panel-heading-btn ml-3">
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                                </div>
+                            </div>
 
-                            <div class="card-body">
+                            <div class="panel-body">
                                 <div class="row">
                                     <div class="table-responsive">
                                         <div class="col-md-3">
@@ -297,14 +331,18 @@ $page_header = "HACT <small>Monitoring System</small>";
 
                         <br>
 
-                        <div class="card card-info">
-                            <div class="card-header">
-                                <div class="switcher switcher-primary pull-right">
-                                    <input type="checkbox" name="check_tb" id="check_tb">
-                                    <label for="check_tb">Active TB?</label>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="switcher switcher-primary">
+                                            <input type="checkbox" name="check_tb" id="check_tb">
+                                            <label for="check_tb">Active TB?</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="card-body" id="div_tb">
+                            <div class="panel-body" id="div_tb">
                                 <div class="row">
                                     <div class="col-md-3">
                                         <div class="form-group">
