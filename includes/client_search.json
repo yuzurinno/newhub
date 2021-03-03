@@ -1,0 +1,15 @@
+<?php
+includes 'include/connection.php';
+    // enter your sql query
+    $sql = "Select * from client_profile";
+// Creates temp array variable
+$client = array();
+// Gets table details
+$result = mysql_query($sql);
+// Adds each records/row to $temp
+while($row=mysql_fetch_row($result)) {
+    $temp[] = $row;
+}
+// Formats json from temp and shows/print on page
+echo json_encode($client);
+?>

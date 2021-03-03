@@ -22,17 +22,17 @@
                     <span>Dashboard</span>
                 </a>
             </li>
-            <li class="has-sub">
-                <a href="javascript:;">
-                    <b class="caret"></b>
-                    <i class="fa fa-users"></i>
-                    <span>Clients</span>
-                </a>
-                <ul class="sub-menu">
-                    <li><a href="masterlist2.php">Masterlist</a></li>
-                    <li><a href="#">Client's Profile</a></li>
-                </ul>
-            </li>
+           <li class="has-sub">
+		   <a href="javascript:;">
+		   <b class="caret"></b>
+		   <i class="fa fa-users"></i>
+		   <span>Clients</span>
+		   </a>
+		   <ul class="sub-menu">
+		   <li><a href="masterlist.php" target="_blank">Master List</a></li>
+		   <li><a href="patients.php" target="_blank">Client's Profile</a></li>
+		   </ul>
+		   </li>
             <li class="has-sub">
                 <a href="tb-stat.php">
                     <i class="fa fa-tv"></i>
