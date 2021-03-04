@@ -349,7 +349,7 @@ Clay Hike
 
 <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="2f70c5f32bf6631aa2736d53-|49" defer=""></script>
 
-<?php include 'scripts.html'; ?>
+<?php include 'includes/scripts.html'; ?>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 <script>
     $(document).ready(function() {

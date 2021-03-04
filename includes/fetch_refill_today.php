@@ -1,6 +1,6 @@
 
 <?php
-include 'includes/connection.php';
+include 'connection.php';
 // include 'includes/select.php';
 
 $columns = array('id', 'client_code', 'drug_name', 'date_next_fill');
