@@ -56,7 +56,7 @@ if(isset($_POST['signin'])){
         <span class="spinner"></span>
     </div>
     <div id="page-container" class="fade">
-       
+
         <div class="login login-with-news-feed">
             <div class="news-feed">
                 <div class="news-image" style="background-image: url(assets/img/login-bg/login-bg-11.jpg)"></div>
@@ -70,7 +70,7 @@ if(isset($_POST['signin'])){
             <div class="right-content">
                 <div class="login-header">
                     <div class="brand">
-                        <span class="logo"></span> <b>TGH</b> HACT 
+                        <span class="logo"></span> <b>TGH</b> HACT
                         <small>Hub Offering PLHIVs Empowerment</small>
                     </div>
                     <div class="icon">
@@ -78,12 +78,15 @@ if(isset($_POST['signin'])){
                     </div>
                 </div>
                 <div class="login-content">
-                     <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="margin-bottom-0">
+                    <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="margin-bottom-0">
                         <div class="form-group m-b-15">
-                            <input type="text" class="form-control form-control-lg" name="username" id="username"  autocomplete="off" placeholder="Username/Email Address" required />
+                            <input type="text" class="form-control form-control-lg" name="username" id="username" autocomplete="off" placeholder="Username/Email Address" required />
                         </div>
-                        <div class="form-group m-b-15">
+                        <div class="input-group m-b-15">
                             <input type="password" class="form-control form-control-lg" name="password" id="password" autocomplete="off" required placeholder="Password" required />
+                            <div class="input-group-append">
+                                <button class="btn btn-lg btn-success" type="button" id="show-password"><i class="fa fa-eye" id="icon"></i></button>
+                            </div>
                         </div>
                         <div class="checkbox checkbox-css m-b-30">
                             <input type="checkbox" id="remember_me_checkbox" value="" />
@@ -92,14 +95,14 @@ if(isset($_POST['signin'])){
                             </label>
                         </div>
                         <div class="login-buttons">
-                            <button type="submit" name="signin" id="signin" value="Log in"class="btn btn-success btn-block btn-lg">Sign me in</button>
+                            <button type="submit" name="signin" id="signin" value="Log in" class="btn btn-success btn-block btn-lg">Sign me in</button>
                         </div>
 
                         <hr />
                         <p class="text-center text-grey-darker mb-0">
                             &copy; TGH All Right Reserved <?php echo date('Y'); ?>
                         </p>
-                         
+
                     </form>
                 </div>
                 <?php if(isset($_POST['signin'])){ echo $alert; } ?>
@@ -109,6 +112,20 @@ if(isset($_POST['signin'])){
     </div>
 
     <?php include 'includes/footer.php'; ?>
+    <script>
+        $('#show-password').click(function(e) {
+            e.preventDefault();
+            var password = document.getElementById("password");
+            if (password.type === "password") {
+                password.type = "text";
+                $('#icon').removeClass('fa-eye').addClass('fa-eye-slash');
+            } else {
+                password.type = "password";
+                $('#icon').removeClass('fa-eye-slash').addClass('fa-eye');
+            }
+        })
+
+    </script>
 </body>
 
 </html>
