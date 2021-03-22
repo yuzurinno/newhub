@@ -26,9 +26,6 @@
 <script src="assets/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
 <script src="assets/js/demo/dashboard.js"></script>
 <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="defaa6b258bf360c301851d1-|49" defer=""></script>
-
-
-
 <script src="assets/plugins/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="assets/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
@@ -50,9 +47,7 @@
 <script src="js/plugins/powerwizard.1.0.min.js"></script>
 <script src="js/plugins/simpleselect.1.0.min.js"></script>
 <script src="js/plugins/tinycontextmenu.1.0.min.js"></script>
-
 <!-- // Third-party plugins // -->
-
 <script src="js/plugins/tinyscrollbar.min.js"></script>
 <script src="js/plugins/jquery.knob.js"></script>
 <script src="js/plugins/prism.min.js"></script>
@@ -75,3 +70,18 @@
 <script src="js/plugins/layout.min.js"></script>
 <script src="js/plugins/masonry.pkgd.min.js"></script>
 <script src="js/plugins/json2.js"></script>
+<script>
+    $(window).on("load", function() {
+        setTimeout(function() {
+            $.gritter.add({
+                title: "Welcome back, <?php echo $sess; ?>!",
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus lacus ut lectus rutrum placerat.",
+                image: "assets/img/user/user-2.jpg",
+                sticky: !0,
+                time: "",
+                class_name: "my-sticky-class"
+            })
+        }, 1e3)
+    })
+
+</script>

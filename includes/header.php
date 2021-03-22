@@ -7,7 +7,6 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-
             <ul class="navbar-nav navbar-right">
                 <li class="navbar-form">
                     <form action="#" method="POST" name="search">
@@ -28,5 +27,4 @@
                     </div>
                 </li>
             </ul>
-
         </div>
