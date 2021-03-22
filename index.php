@@ -24,8 +24,8 @@ $page_header = "HACT <small>Monitoring System</small>";
         table td {
             word-break: keep-all !important;
         }
-        
-
+       
+   
     </style>
 </head>
 
@@ -36,71 +36,64 @@ $page_header = "HACT <small>Monitoring System</small>";
     </div>
     <div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
         <?php include 'includes/header.php'; ?>
-        <?php include 'includes/sidebar.php'; ?>
+        
+<div id="sidebar" class="sidebar">
+    <div data-scrollbar="true" data-height="100%">
+        <ul class="nav">
+            <li class="nav-profile">
+                <a href="javascript:;" data-toggle="nav-profile">
+                    <div class="cover with-shadow"></div>
+                    <div class="image">
+                        <img src="assets/img/user/user-13.jpg" alt="" />
+                    </div>
+                    <div class="info">
+                        <?php echo "$fname $lname"; ?>
+                        <small><?php echo $designation; ?></small>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav">
+            <li class="nav-header">Navigation</li>
+            <li class="has-sub active">
+                <a href="index.php">
+                    <i class="fa fa-th-large"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+           <li class="has-sub">
+		   <a href="javascript:;">
+		   <b class="caret"></b>
+		   <i class="fa fa-users"></i>
+		   <span>Clients</span>
+		   </a>
+		   <ul class="sub-menu">
+		   <li><a href="masterlist.php" target="_blank">Master List</a></li>
+		   <li><a href="patients.php" target="_blank">Client's Profile</a></li>
+		   </ul>
+		   </li>
+            <li class="has-sub">
+                <a href="tb-stat.php">
+                    <i class="fa fa-tv"></i>
+                    <span>TB Status Monitoring</span>
+                </a>
+            </li>
+            <li class="has-sub">
+                <a href="transactions.php">
+                    <i class="fa fa-calculator"></i>
+                    <span>Transactions</span>
+                </a>
+            </li>
+            <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
+        </ul>
+    </div>
+</div>
+<div class="sidebar-bg"></div>
+
         <div id="content" class="content">
             <?php include 'includes/breadcrumb.php'; ?>
-            <div class="row">
-
-                <div class="col-xl-3 col-md-6">
-                    <div class="widget widget-stats bg-teal">
-                        <div class="stats-icon stats-icon-lg"><i class="fa fa-globe fa-fw"></i></div>
-                        <div class="stats-content">
-                            <div class="stats-title">TOTAL CLIENTS</div>
-                            <div class="stats-number">7,842,900</div>
-                            <div class="stats-progress progress">
-                                <div class="progress-bar" style="width: 70.1%;"></div>
-                            </div>
-                            <div class="stats-desc">Better than last week (70.1%)</div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-xl-3 col-md-6">
-                    <div class="widget widget-stats bg-pink">
-                        <div class="stats-icon stats-icon-lg"><i class="fa fa-dollar-sign fa-fw"></i></div>
-                        <div class="stats-content">
-                            <div class="stats-title">TODAY'S NEW CLIENTS</div>
-                            <div class="stats-number">180,200</div>
-                            <div class="stats-progress progress">
-                                <div class="progress-bar" style="width: 40.5%;"></div>
-                            </div>
-                            <div class="stats-desc">Better than last week (40.5%)</div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-xl-3 col-md-6">
-                    <div class="widget widget-stats bg-indigo">
-                        <div class="stats-icon stats-icon-lg"><i class="fa fa-archive fa-fw"></i></div>
-                        <div class="stats-content">
-                            <div class="stats-title">TOTAL TRANS-IN</div>
-                            <div class="stats-number">38,900</div>
-                            <div class="stats-progress progress">
-                                <div class="progress-bar" style="width: 76.3%;"></div>
-                            </div>
-                            <div class="stats-desc">Better than last week (76.3%)</div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-xl-3 col-md-6">
-                    <div class="widget widget-stats bg-dark">
-                        <div class="stats-icon stats-icon-lg"><i class="fa fa-comment-alt fa-fw"></i></div>
-                        <div class="stats-content">
-                            <div class="stats-title">TOTAL TRANS-OUT</div>
-                            <div class="stats-number">3,988</div>
-                            <div class="stats-progress progress">
-                                <div class="progress-bar" style="width: 54.9%;"></div>
-                            </div>
-                            <div class="stats-desc">Better than last week (54.9%)</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+          <?php include 'includes/body.php'; ?>
+        
 
 
             <div class="row">
@@ -184,23 +177,25 @@ Try to mouseover and drag over any table column below.
                     <div class="panel panel-inverse" data-sortable-id="index-1">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                
+                                For Follow up:
                             </h4>
                         </div>
                         <div id="visitors-map" class="bg-dark-darker" style="height: 179px;"></div>
                         <div class="list-group">
+<!--
                             <a href="javascript:;" class="list-group-item list-group-item-action list-group-item-inverse d-flex justify-content-between align-items-center text-ellipsis">
-                                1. United State
-                                <span class="badge bg-teal f-s-10">20.95%</span>
+                              
+                                <span class="badge bg-teal f-s-10"></span>
                             </a>
                             <a href="javascript:;" class="list-group-item list-group-item-action list-group-item-inverse d-flex justify-content-between align-items-center text-ellipsis">
-                                2. India
-                                <span class="badge bg-blue f-s-10">16.12%</span>
+                              
+                                <span class="badge bg-blue f-s-10"></span>
                             </a>
                             <a href="javascript:;" class="list-group-item list-group-item-action list-group-item-inverse d-flex justify-content-between align-items-center text-ellipsis">
-                                3. Mongolia
-                                <span class="badge bg-silver-darker f-s-10">14.99%</span>
+                              
+                                <span class="badge bg-silver-darker f-s-10"></span>
                             </a>
+-->
                         </div>
                     </div>
                 </div>
@@ -311,43 +306,14 @@ Clay Hike
     </div>
 
 </body>
- <?php include 'includes/app-settings.php'; ?>
+  <?php include 'includes/app-settings.php'; ?>
         <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
-    </div>
+        <script src="assets/plugins/highlight.js/highlight.min.js" type="67901a91b1666f1b32d3dba0-text/javascript"></script>
+        <script src="assets/js/demo/render.highlight.js" type="67901a91b1666f1b32d3dba0-text/javascript"></script>
+ 
 
     <?php include 'includes/footer.php'; ?>
-    <script src="assets/js/app.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="assets/js/theme/default.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-
-<script type="2f70c5f32bf6631aa2736d53-text/javascript">
-        (function(i,s,o,g,r,a,m){i['GoogleAnalytics
-        Object']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-53034621-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
-<?php include 'includes/app-settings.php'; ?>
-<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
-
-<?php include 'includes/footer.php'; ?>
-<script src="assets/js/app.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="assets/js/theme/default.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="assets/js/app.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="assets/js/theme/default.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-
-<script src="assets/plugins/datatables.net/js/jquery.dataTables.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="assets/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="assets/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="assets/plugins/datatables.net-autofill/js/dataTables.autoFill.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="assets/plugins/datatables.net-autofill-bs4/js/autoFill.bootstrap4.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-<script src="assets/js/demo/table-manage-autofill.demo.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
-
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="2f70c5f32bf6631aa2736d53-|49" defer=""></script>
+    <script>
 
 <?php include 'includes/scripts.html'; ?>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>

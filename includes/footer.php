@@ -30,6 +30,9 @@
 <script src="assets/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
 <script src="assets/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+<script src="assets/plugins/datatables.net-autofill/js/dataTables.autoFill.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
+<script src="assets/plugins/datatables.net-autofill-bs4/js/autoFill.bootstrap4.min.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
+<script src="assets/js/demo/table-manage-autofill.demo.js" type="2f70c5f32bf6631aa2736d53-text/javascript"></script>
 <script src="assets/plugins/highlight.js/highlight.min.js"></script>
 <script src="assets/js/demo/render.highlight.js"></script>
 <script src="js/plugins/responsivetables.1.0.min.js"></script>

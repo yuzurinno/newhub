@@ -1,6 +1,6 @@
 
 <?php
-include 'includes/connection.php';
+include 'connection.php';
 // include 'includes/select.php';
 $columns = array('id', 'client_code', 'kp_class', 'arv_date_started', 'date_nearest_refill', 'tb_status', 'regimen_code', 'cd4_date_started', 'cd4_result', 'vl_date_started', 'vl_result', 'ipt_status', 'ipt_date_started', 'ipt_date_completed_discountinued', 'ipt_remarks', 'cpt_status', 'cpt_date_started', 'cpt_date_completed_discountinued', 'cpt_remarks', 'azi_status', 'azi_date_started', 'azi_date_completed_discountinued', 'azi_remarks' );
 
@@ -35,7 +35,7 @@ $data = array();
 
 while($row = mysqli_fetch_array($result)){
     $client_code = $row['client_code'];
-    $id = $row['id']; 
+    $id = $row['id'];
     $arv_date_started = $row['arv_date_started'];
     $tb_status = $row['tb_status'];
     $regimen_code = $row['regimen_code'];

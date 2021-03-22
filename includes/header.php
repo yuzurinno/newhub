@@ -9,12 +9,14 @@
             </div>
             <ul class="navbar-nav navbar-right">
                 <li class="navbar-form">
+<!--
                     <form action="#" method="POST" name="search">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Enter keyword" />
                             <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
                         </div>
                     </form>
+-->
                 </li>
 
                 <li class="dropdown navbar-user">

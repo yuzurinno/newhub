@@ -35,71 +35,61 @@ $page_header = "HACT <small>Monitoring System</small>";
     </div>
     <div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
         <?php include 'includes/header.php'; ?>
-        <?php include 'includes/sidebar.php'; ?>
+         <div id="sidebar" class="sidebar">
+    <div data-scrollbar="true" data-height="100%">
+        <ul class="nav">
+            <li class="nav-profile">
+                <a href="javascript:;" data-toggle="nav-profile">
+                    <div class="cover with-shadow"></div>
+                    <div class="image">
+                        <img src="assets/img/user/user-13.jpg" alt="" />
+                    </div>
+                    <div class="info">
+                        <?php echo "$fname $lname"; ?>
+                        <small><?php echo $designation; ?></small>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav">
+            <li class="nav-header">Navigation</li>
+            <li class="has-sub">
+                <a href="index.php">
+                    <i class="fa fa-th-large"></i>
+                    <span class="target">Dashboard</span>
+                </a>
+            </li>
+           <li class="has-sub ">
+		   <a href="javascript:;">
+		   <b class="caret"></b>
+		   <i class="fa fa-users"></i>
+		   <span>Clients</span>
+		   </a>
+		   <ul class="sub-menu">
+		   <li><a href="masterlist.php" target="_blank">Master List</a></li>
+		   <li><a href="patients.php" target="_blank">Client's Profile</a></li>
+		   </ul>
+		   </li>
+            <li class="has-sub ">
+                <a href="tb-stat.php">
+                    <i class="fa fa-tv"></i>
+                    <span>TB Status Monitoring</span>
+                </a>
+            </li>
+            <li class="has-sub active">
+                <a href="transactions.php">
+                    <i class="fa fa-calculator"></i>
+                    <span>Transactions</span>
+                </a>
+            </li>
+            <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
+        </ul>
+    </div>
+</div>
+<div class="sidebar-bg"></div>
         <div id="content" class="content">
             <?php include 'includes/breadcrumb.php'; ?>
-            <div class="row">
-
-                <div class="col-xl-3 col-md-6">
-                    <div class="widget widget-stats bg-teal">
-                        <div class="stats-icon stats-icon-lg"><i class="fa fa-globe fa-fw"></i></div>
-                        <div class="stats-content">
-                            <div class="stats-title">TOTAL CLIENTS</div>
-                            <div class="stats-number">7,842,900</div>
-                            <div class="stats-progress progress">
-                                <div class="progress-bar" style="width: 70.1%;"></div>
-                            </div>
-                            <div class="stats-desc">Better than last week (70.1%)</div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-xl-3 col-md-6">
-                    <div class="widget widget-stats bg-pink">
-                        <div class="stats-icon stats-icon-lg"><i class="fa fa-dollar-sign fa-fw"></i></div>
-                        <div class="stats-content">
-                            <div class="stats-title">TODAY'S NEW CLIENTS</div>
-                            <div class="stats-number">0</div>
-                            <div class="stats-progress progress">
-                                <!--                                <div class="progress-bar" style="width: 40.5%;"></div>-->
-                            </div>
-                            <div class="stats-desc">Today</div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-xl-3 col-md-6">
-                    <div class="widget widget-stats bg-indigo">
-                        <div class="stats-icon stats-icon-lg"><i class="fa fa-archive fa-fw"></i></div>
-                        <div class="stats-content">
-                            <div class="stats-title">TOTAL TRANS-IN</div>
-                            <div class="stats-number">38,900</div>
-                            <div class="stats-progress progress">
-                                <div class="progress-bar" style="width: 76.3%;"></div>
-                            </div>
-                            <div class="stats-desc">Better than last week (76.3%)</div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-xl-3 col-md-6">
-                    <div class="widget widget-stats bg-dark">
-                        <div class="stats-icon stats-icon-lg"><i class="fa fa-comment-alt fa-fw"></i></div>
-                        <div class="stats-content">
-                            <div class="stats-title">TOTAL TRANS-OUT</div>
-                            <div class="stats-number">3,988</div>
-                            <div class="stats-progress progress">
-                                <div class="progress-bar" style="width: 54.9%;"></div>
-                            </div>
-                            <div class="stats-desc">Better than last week (54.9%)</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+                    <?php include 'includes/body.php'; ?>
 
 
             <div class="row">
