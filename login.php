@@ -45,16 +45,14 @@ if(isset($_POST['signin'])){
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
+OP
 <head>
     <title>Login | Dashboard</title>
     <?php include 'includes/head.php'; ?>
 </head>
 
 <body class="pace-top">
-    <div id="page-loader" class="fade show">
-        <span class="spinner"></span>
-    </div>
+   
     <div id="page-container" class="fade">
        
         <div class="login login-with-news-feed">
