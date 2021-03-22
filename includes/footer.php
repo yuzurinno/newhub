@@ -77,7 +77,7 @@
     setTimeout(function() {
         $.gritter.add({
             title: "Welcome back, <?php echo $sess; ?>!",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus lacus ut lectus rutrum placerat.",
+            text: "Please make sure to indicate the date when you are posting transactions. Thank you!",
             image: "assets/img/user/user-2.jpg",
             sticky: !0,
             time: "",
