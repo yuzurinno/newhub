@@ -473,7 +473,7 @@ $page_header = "HACT <small>Monitoring System</small>";
         <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
     </div>
 
-    <?php include 'includes/footer.php'; ?>
+    <?php include 'includes/footer_no_msg.php'; ?>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script>
         $(document).ready(function() {

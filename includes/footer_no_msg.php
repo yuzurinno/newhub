@@ -73,16 +73,4 @@
 <script src="js/plugins/layout.min.js"></script>
 <script src="js/plugins/masonry.pkgd.min.js"></script>
 <script src="js/plugins/json2.js"></script>
-<script>
-    setTimeout(function() {
-        $.gritter.add({
-            title: "Welcome back, <?php echo $sess; ?>!",
-            text: "Please make sure to indicate the date when you are posting transactions. Thank you!",
-            image: "assets/img/user/user-2.png",
-            sticky: !0,
-            time: "",
-            class_name: "my-sticky-class"
-        })
-    }, 1000)
 
-</script>

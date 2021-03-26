@@ -222,7 +222,7 @@ $page_header = "HACT <small>Monitoring System</small>";
         <script src="assets/js/demo/render.highlight.js" type="67901a91b1666f1b32d3dba0-text/javascript"></script>
     </div>
 
-    <?php include 'includes/footer.php'; ?>
+    <?php include 'includes/footer_no_msg.php'; ?>
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script>
         $(document).ready(function() {

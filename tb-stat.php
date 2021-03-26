@@ -147,7 +147,7 @@ $page_header = "HACT <small>Monitoring System</small>";
 <script src="assets/js/demo/render.highlight.js" type="67901a91b1666f1b32d3dba0-text/javascript"></script>
     </div>
 
-    <?php include 'includes/footer.php'; ?>
+    <?php include 'includes/footer_no_msg.php'; ?>
     <script>
         $(document).ready(function() {
             fetch_data();
